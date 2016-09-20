@@ -1,0 +1,22 @@
+﻿Build started 9/18/2016 11:53:25 PM.
+     1>Project "G:\Drive\College\CS 236\LexAn\LexAn\LexAn.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         Z:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt FileReader.cpp
+         FileReader.cpp
+     1>g:\drive\college\cs 236\lexan\lexan\filereader.cpp(41): warning C4018: '<' : signed/unsigned mismatch
+       Link:
+         Z:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"G:\Drive\College\CS 236\LexAn\Debug\LexAn.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"G:\Drive\College\CS 236\LexAn\Debug\LexAn.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"G:\Drive\College\CS 236\LexAn\Debug\LexAn.lib" /MACHINE:X86 Debug\Colon.obj
+         Debug\ColonDash.obj
+         Debug\Comma.obj
+         Debug\FileReader.obj
+         Debug\Multiply.obj
+         Debug\Period.obj
+         Debug\Q_mark.obj
+         Debug\Source.obj
+         Debug\Undefined.obj
+         LexAn.vcxproj -> G:\Drive\College\CS 236\LexAn\Debug\LexAn.exe
+     1>Done Building Project "G:\Drive\College\CS 236\LexAn\LexAn\LexAn.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:00.59
