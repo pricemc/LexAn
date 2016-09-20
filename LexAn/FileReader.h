@@ -5,8 +5,8 @@ class FileReader
 {
 public:
 	FileReader();
-	FileReader(std::string fileName);
 	~FileReader();
+	void read(std::string fileName);
 	char getChar();
 	std::string getString(int size);
 	void reset();

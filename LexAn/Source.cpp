@@ -20,13 +20,15 @@ std::string generateToken(Automatan* a, FileReader input, int size)
 int main( int argc, char *argv[])
 {
 	//Usage Requirements
+	FileReader input;
 	if (argc != 2)
 	{
 		std::cout << "usage: " << argv[0] << " <filename>\n";
-		FileReader input;
 		input.test(":-,,.?.\ns::-");
 	}
-	else FileReader input(argv[1]);
+	else {
+		input.read(argv[1]);
+	}
 	{
 		std::vector<Automatan*> automata = {
 			new Comma(),

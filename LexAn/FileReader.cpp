@@ -2,7 +2,8 @@
 #include <fstream>
 #include <iostream>
 
-FileReader::FileReader(std::string fileName)
+
+void FileReader::read(std::string fileName)
 {
 	std::ifstream myfile(fileName);
 	std::string line;
