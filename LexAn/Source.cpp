@@ -29,44 +29,40 @@ int main( int argc, char *argv[])
 	else {
 		input.read(argv[1]);
 	}
+	std::vector<Automatan*> automata = {
+		new Comma(),
+		new Period(),
+		new Q_mark(),
+		new Colon(),
+		new ColonDash()
+	};
+	Undefined* undf = new Undefined();
+	while (!input.isEmpty())
 	{
-		std::vector<Automatan*> automata = {
-			new Comma(),
-			new Period(),
-			new Q_mark(),
-			new Colon(),
-			new ColonDash()
-		};
-		Undefined* undf = new Undefined();
-
-		while (!input.isEmpty())
+		int sl = 0;
+		int automataHigh = -1;
+		for (int i = 0; i < automata.size(); i++)
 		{
-			int sl = 0;
-			int automataHigh = -1;
-			for (int i = 0; i < automata.size(); i++)
+			int automataRead = automata[i]->read(input);
+			if ( automataRead > sl)
 			{
-				int automataRead = automata[i]->read(input);
-				if ( automataRead > sl)
-				{
-					sl = automataRead;
-					automataHigh = i;
-				}
-			}
-
-			if (sl == 0)
-			{
-				std::cout << generateToken(undf, input, 1) << std::endl;;
-				input.removeString(1);
-			}
-			else
-			{
-				std::cout << generateToken(automata[automataHigh], input, sl) << std::endl;
-				input.removeString(sl);
+				sl = automataRead;
+				automataHigh = i;
 			}
 		}
+					if (sl == 0)
+		{
+			std::cout << generateToken(undf, input, 1) << std::endl;;
+			input.removeString(1);
+		}
+		else
+		{
+			std::cout << generateToken(automata[automataHigh], input, sl) << std::endl;
+			input.removeString(sl);
+		}
 	}
-
-	system("pause");
+	delete undf;
+	for (int i = 0; i < automata.size(); i++) delete automata[i];
 	return 0;
 }
 
