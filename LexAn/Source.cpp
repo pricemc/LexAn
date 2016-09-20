@@ -26,8 +26,8 @@ int main( int argc, char *argv[])
 		FileReader input;
 		input.test(":-,,.?.\ns::-");
 	}
+	else FileReader input(argv[1]);
 	{
-		FileReader input(argv[1]);
 		std::vector<Automatan*> automata = {
 			new Comma(),
 			new Period(),
