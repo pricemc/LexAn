@@ -1,19 +1,21 @@
-﻿Build started 9/19/2016 10:53:11 PM.
+﻿Build started 9/20/2016 11:17:31 PM.
      1>Project "G:\Drive\College\CS 236\LexAn\LexAn\LexAn.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
          Z:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Colon.cpp ColonDash.cpp Comma.cpp FileReader.cpp Multiply.cpp Period.cpp Q_mark.cpp Source.cpp Undefined.cpp
-         Undefined.cpp
          Source.cpp
-     1>g:\drive\college\cs 236\lexan\lexan\source.cpp(46): warning C4018: '<' : signed/unsigned mismatch
+     1>g:\drive\college\cs 236\lexan\lexan\source.cpp(44): warning C4018: '<' : signed/unsigned mismatch
+     1>g:\drive\college\cs 236\lexan\lexan\source.cpp(65): warning C4018: '<' : signed/unsigned mismatch
+         FileReader.cpp
+     1>g:\drive\college\cs 236\lexan\lexan\filereader.cpp(43): warning C4018: '<' : signed/unsigned mismatch
+         Generating Code...
+         Skipping... (no relevant changes detected)
+         Undefined.cpp
          Q_mark.cpp
          Period.cpp
          Multiply.cpp
-         FileReader.cpp
-     1>g:\drive\college\cs 236\lexan\lexan\filereader.cpp(43): warning C4018: '<' : signed/unsigned mismatch
          Comma.cpp
          ColonDash.cpp
          Colon.cpp
-         Generating Code...
        Link:
          Z:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"G:\Drive\College\CS 236\LexAn\Debug\LexAn.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"G:\Drive\College\CS 236\LexAn\Debug\LexAn.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"G:\Drive\College\CS 236\LexAn\Debug\LexAn.lib" /MACHINE:X86 Debug\Colon.obj
          Debug\ColonDash.obj
@@ -29,4 +31,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:02.18
+Time Elapsed 00:00:01.79

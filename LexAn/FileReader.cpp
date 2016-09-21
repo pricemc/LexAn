@@ -46,9 +46,7 @@ char FileReader::getChar()
 	}
 	if (a == '\n')
 	{
-		removeString(1);
 		line++;
-		return getChar();
 	}
 	return a;
 }
