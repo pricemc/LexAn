@@ -63,6 +63,7 @@ int main( int argc, char *argv[])
 	}
 	delete undf;
 	for (int i = 0; i < automata.size(); i++) delete automata[i];
+	system("pause");
 	return 0;
 }
 
