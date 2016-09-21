@@ -50,7 +50,7 @@ int main( int argc, char *argv[])
 				automataHigh = i;
 			}
 		}
-					if (sl == 0)
+		if (sl == 0)
 		{
 			std::cout << generateToken(undf, input, 1) << std::endl;;
 			input.removeString(1);

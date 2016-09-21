@@ -44,10 +44,6 @@ char FileReader::getChar()
 		a = file.at(p);
 		p++;
 	}
-	if (a == '\n')
-	{
-		line++;
-	}
 	return a;
 }
 
@@ -58,6 +54,8 @@ std::string FileReader::getString(int size)
 
 void FileReader::removeString(int size)
 {
+	for (int i = 0; i < size; i++)
+		if (getChar() == '/n') line++;
 	file.erase(0, size);
 }
 
