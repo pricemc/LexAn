@@ -42,6 +42,12 @@
     <ClCompile Include="Multiply.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Left_paren.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Right_paren.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="FileReader.h">
@@ -69,6 +75,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Multiply.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Left_paren.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Right_paren.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
