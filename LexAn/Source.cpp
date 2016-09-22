@@ -9,6 +9,9 @@
 #include "Right_paren.h"
 #include "Colon.h"
 #include "ColonDash.h"
+#include "Multiply.h"
+#include "Add.h"
+#include "Facts.h"
 #include "Undefined.h"
 #include <vector>
 
@@ -24,7 +27,7 @@ int main( int argc, char *argv[])
 {
 	//Usage Requirements
 	FileReader input;
-	std::string test = ":-, (),.?.\ns::-";
+	std::string test = ":Facts*:-Fa+";
 	if (argc != 2)
 	{
 		std::cout << "usage: " << argv[0] << " <filename>\n";
@@ -41,7 +44,10 @@ int main( int argc, char *argv[])
 		new Left_paren(),
 		new Right_paren(),
 		new Colon(),
-		new ColonDash()
+		new ColonDash(),
+		new Multiply(),
+		new Add(),
+		new Facts()
 	};
 	Undefined* undf = new Undefined();
 	while (!input.isEmpty())

@@ -64,29 +64,39 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Add.cpp" />
     <ClCompile Include="Colon.cpp" />
     <ClCompile Include="ColonDash.cpp" />
     <ClCompile Include="Comma.cpp" />
+    <ClCompile Include="Facts.cpp" />
     <ClCompile Include="FileReader.cpp" />
     <ClCompile Include="Left_paren.cpp" />
     <ClCompile Include="Multiply.cpp" />
     <ClCompile Include="Period.cpp" />
+    <ClCompile Include="Queries.cpp" />
     <ClCompile Include="Q_mark.cpp" />
     <ClCompile Include="Right_paren.cpp" />
+    <ClCompile Include="Rules.cpp" />
+    <ClCompile Include="Schemes.cpp" />
     <ClCompile Include="Source.cpp" />
     <ClCompile Include="Undefined.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Add.h" />
     <ClInclude Include="Automatan.h" />
     <ClInclude Include="Colon.h" />
     <ClInclude Include="ColonDash.h" />
     <ClInclude Include="Comma.h" />
+    <ClInclude Include="Facts.h" />
     <ClInclude Include="FileReader.h" />
     <ClInclude Include="Left_paren.h" />
     <ClInclude Include="Multiply.h" />
     <ClInclude Include="Period.h" />
+    <ClInclude Include="Queries.h" />
     <ClInclude Include="Q_mark.h" />
     <ClInclude Include="Right_paren.h" />
+    <ClInclude Include="Rules.h" />
+    <ClInclude Include="Schemes.h" />
     <ClInclude Include="Undefined.h" />
   </ItemGroup>
   <ItemGroup>
