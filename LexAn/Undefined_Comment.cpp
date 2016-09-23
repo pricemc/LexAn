@@ -44,7 +44,7 @@ int Undefined_Comment::whichComment(FileReader& file)
 int Undefined_Comment::block(FileReader& file)
 {
 	char c = file.getChar();
-	if (c != EOF)
+	if (c != EOF && c!= '|')
 	{
 		int number = block(file);
 		if (number == 0) return 0;
