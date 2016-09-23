@@ -41,8 +41,8 @@ int Undefined_String::afterFirst(FileReader& file)
 		int number = afterFirst(file);
 		return number + 1;
 	}
-	else if (c == '\'') return apostrophe(file);
-	return 0;
+	else if (c == '\'') return apostrophe(file) + 1;
+	return 1;
 }
 
 int Undefined_String::apostrophe(FileReader& file)

@@ -50,9 +50,10 @@ int Undefined_Comment::block(FileReader& file)
 		if (number == 0) return 0;
 		return number + 1;
 	}
-	else if (c == '|' && hash(file))
+	else if (c == '|')
 	{
-		return 0;
+		if (hash(file)) return 0;
+		return block(file) + 2;
 	}
 	return 1;
 }

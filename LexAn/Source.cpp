@@ -36,7 +36,7 @@ std::string generateToken(Automatan* a, FileReader input, int size)
 	input.reset();
 	std::stringstream oss;
 
-	oss << "("<< a->getName() << ",\"" << input.getString(size) << "\"," << input.lineNumber() + ")";
+	oss << "("<< a->getName() << ",\"" << input.getString(size) << "\"," << input.lineNumber() << ")";
 
 	return oss.str();
 }
@@ -46,7 +46,7 @@ int main( int argc, char *argv[])
 	int tokens = 0;
 	//Usage Requirements
 	FileReader input;
-	std::string test = ":Facts*:-Fa+Queri\nesRules 'Hello'Schemes \n#|c\nomment|' hello";
+	std::string test = ":Facts*:-Fa+Queri\nesRules 'Hello'Schemes \nc\nomment|' hello''test";
 	if (argc != 2)
 	{
 		//use test data
@@ -101,15 +101,18 @@ int main( int argc, char *argv[])
 			input.reset();
 			char testt = input.getChar();
 			if (!isspace(testt))
-				std::cout << generateToken(undf, input, 1) << std::endl;;
+			{
+				std::cout << generateToken(undf, input, 1) << std::endl;
+				tokens++;
+			}
 			input.removeString(1);
 		}
 		else	//remove and generate token for longest automata
 		{
 			std::cout << generateToken(automata[automataHigh], input, sl) << std::endl;
 			input.removeString(sl);
+			tokens++;
 		}
-		tokens++;
 	}
 
 	//generate EOF token
