@@ -11,7 +11,13 @@
 #include "ColonDash.h"
 #include "Multiply.h"
 #include "Add.h"
+#include "Schemes.h"
 #include "Facts.h"
+#include "Rules.h"
+#include "Queries.h"
+#include "Id.h"
+#include "String.h"
+#include "Comment.h"
 #include "Undefined.h"
 #include <vector>
 
@@ -27,7 +33,7 @@ int main( int argc, char *argv[])
 {
 	//Usage Requirements
 	FileReader input;
-	std::string test = ":Facts*:-Fa+";
+	std::string test = ":Facts*:-Fa+Queri\nesRules 'Hello'Schemes \n#|c\nomment|#";
 	if (argc != 2)
 	{
 		std::cout << "usage: " << argv[0] << " <filename>\n";
@@ -47,7 +53,13 @@ int main( int argc, char *argv[])
 		new ColonDash(),
 		new Multiply(),
 		new Add(),
-		new Facts()
+		new Schemes(),
+		new Facts(),
+		new Rules(),
+		new Queries(),
+		new Id(),
+		new String(),
+		new Comment()
 	};
 	Undefined* undf = new Undefined();
 	while (!input.isEmpty())
@@ -77,6 +89,7 @@ int main( int argc, char *argv[])
 			input.removeString(sl);
 		}
 	}
+	std::cout << "(EOF,\"\"," << (char)(input.lineNumber() + 48) << ")" << std::endl;
 	delete undf;
 	for (int i = 0; i < automata.size(); i++) delete automata[i];
 	system("pause");

@@ -6,7 +6,13 @@ class Rules :
 public:
 	Rules();
 	~Rules();
-	//virtual int read(FileReader& file);
-	//virtual std::string getName();
+	virtual int read(FileReader& file);
+	virtual std::string getName();
+private:
+	bool r(FileReader& file);
+	bool u(FileReader& file);
+	bool l(FileReader& file);
+	bool e(FileReader& file);
+	bool s(FileReader& file);
 };
 

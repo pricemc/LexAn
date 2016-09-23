@@ -14,6 +14,7 @@ public:
 	void test(std::string testFile);
 	void removeString(int size);
 	int lineNumber();
+	void increaseLine();
 private:
 	std::string file;
 	int p = 0;

@@ -63,6 +63,15 @@
     <ClCompile Include="Queries.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Id.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="String.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Comment.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="FileReader.h">
@@ -111,6 +120,15 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Queries.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Id.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="String.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Comment.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

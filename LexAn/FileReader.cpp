@@ -39,6 +39,7 @@ void FileReader::reset()
 
 char FileReader::getChar()
 {
+	if (p >= file.length()) return EOF;
 	char a = file.at(p);
 	p++;
 	return a;
@@ -66,4 +67,9 @@ int FileReader::lineNumber()
 void FileReader::test(std::string testFile)
 {
 	file = testFile;
+}
+
+void FileReader::increaseLine()
+{
+	line++;
 }
