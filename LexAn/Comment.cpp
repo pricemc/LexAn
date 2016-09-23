@@ -48,10 +48,9 @@ int Comment::line(FileReader& file)
 	if (c != '\n' && c != EOF)
 	{
 		int number = line(file);
-		if (number == 0) return 0;
 		return number + 1;
 	}
-	return 1;
+	return 0;
 }
 
 int Comment::block(FileReader& file)

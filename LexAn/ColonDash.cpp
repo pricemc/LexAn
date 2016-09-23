@@ -19,7 +19,7 @@ int ColonDash::read(FileReader& file)
 
 std::string ColonDash::getName()
 {
-	return "COLONDASH";
+	return "COLON_DASH";
 }
 int dash(FileReader& file)
 {

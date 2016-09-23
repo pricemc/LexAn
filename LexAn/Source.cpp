@@ -46,7 +46,7 @@ int main( int argc, char *argv[])
 	int tokens = 0;
 	//Usage Requirements
 	FileReader input;
-	std::string test = ":Facts*:-Fa+Queri\nesRules 'Hello'Schemes \nc\nomment|' hello''test";
+	std::string test = "# | test\ntest\n:-";
 	if (argc != 2)
 	{
 		//use test data
