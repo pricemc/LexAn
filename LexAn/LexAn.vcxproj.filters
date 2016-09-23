@@ -72,6 +72,12 @@
     <ClCompile Include="Comment.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Undefined_String.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Undefined_Comment.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="FileReader.h">
@@ -129,6 +135,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Comment.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Undefined_String.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Undefined_Comment.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

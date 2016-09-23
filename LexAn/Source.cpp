@@ -18,6 +18,8 @@
 #include "Id.h"
 #include "String.h"
 #include "Comment.h"
+#include "Undefined_String.h"
+#include "Undefined_Comment.h"
 #include "Undefined.h"
 #include <vector>
 
@@ -39,7 +41,7 @@ int main( int argc, char *argv[])
 {
 	//Usage Requirements
 	FileReader input;
-	std::string test = ":Facts*:-Fa+Queri\nesRules 'Hello'Schemes \n#|c\nomment|#";
+	std::string test = ":Facts*:-Fa+Queri\nesRules 'Hello'Schemes \n#|c\nomment|' hello";
 	if (argc != 2)
 	{
 		//use test data
@@ -68,7 +70,9 @@ int main( int argc, char *argv[])
 		new Queries(),
 		new Id(),
 		new String(),
-		new Comment()
+		new Comment(),
+		new Undefined_String(),
+		new Undefined_Comment()
 	};
 	//Undefined Automata
 	Undefined* undf = new Undefined();
@@ -108,6 +112,7 @@ int main( int argc, char *argv[])
 	//mem clean
 	delete undf;
 	for (int i = 0; i < automata.size(); i++) delete automata[i];
+	system("pause");
 	return 0;
 }
 
