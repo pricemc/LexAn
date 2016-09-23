@@ -48,6 +48,6 @@ int String::afterFirst(FileReader& file)
 
 int String::apostrophe(FileReader& file)
 {
-	if (file.getChar() == '\'') return afterFirst(file);
+	if (file.getChar() == '\'') return afterFirst(file) + 1;
 	return 0;
 }

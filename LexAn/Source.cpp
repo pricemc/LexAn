@@ -22,6 +22,7 @@
 #include "Undefined_Comment.h"
 #include "Undefined.h"
 #include <vector>
+#include <sstream>
 
 /*
 generateToken
@@ -33,12 +34,16 @@ std::string generateToken(Automatan* a, FileReader input, int size)
 {
 	std::string output = "";
 	input.reset();
-	output += "(" + a->getName() + ",\"" + input.getString(size) + "\"," + (char)(input.lineNumber()+48) + ")";
-	return output;
+	std::stringstream oss;
+
+	oss << "("<< a->getName() << ",\"" << input.getString(size) << "\"," << input.lineNumber() + ")";
+
+	return oss.str();
 }
 
 int main( int argc, char *argv[])
 {
+	int tokens = 0;
 	//Usage Requirements
 	FileReader input;
 	std::string test = ":Facts*:-Fa+Queri\nesRules 'Hello'Schemes \n#|c\nomment|' hello";
@@ -104,11 +109,12 @@ int main( int argc, char *argv[])
 			std::cout << generateToken(automata[automataHigh], input, sl) << std::endl;
 			input.removeString(sl);
 		}
+		tokens++;
 	}
 
 	//generate EOF token
-	std::cout << "(EOF,\"\"," << (char)(input.lineNumber() + 48) << ")" << std::endl;
-	
+	std::cout << "(EOF,\"\"," << input.lineNumber() << ")" << std::endl;
+	std::cout << "Total Tokens = " << ++tokens << std::endl;
 	//mem clean
 	delete undf;
 	for (int i = 0; i < automata.size(); i++) delete automata[i];
