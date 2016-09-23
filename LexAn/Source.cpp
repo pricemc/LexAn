@@ -21,6 +21,12 @@
 #include "Undefined.h"
 #include <vector>
 
+/*
+generateToken
+	prints out token
+	pre: automatan exists, input is not empty, size != 0
+	post: token printed to std::cout
+*/
 std::string generateToken(Automatan* a, FileReader input, int size)
 {
 	std::string output = "";
@@ -36,6 +42,7 @@ int main( int argc, char *argv[])
 	std::string test = ":Facts*:-Fa+Queri\nesRules 'Hello'Schemes \n#|c\nomment|#";
 	if (argc != 2)
 	{
+		//use test data
 		std::cout << "usage: " << argv[0] << " <filename>\n";
 		std::cout << "Using test data instead: " << test << std::endl;
 		input.test(test);
@@ -43,6 +50,8 @@ int main( int argc, char *argv[])
 	else {
 		input.read(argv[1]);
 	}
+
+	//Automata vector to run through in algorithm
 	std::vector<Automatan*> automata = {
 		new Comma(),
 		new Period(),
@@ -61,12 +70,15 @@ int main( int argc, char *argv[])
 		new String(),
 		new Comment()
 	};
+	//Undefined Automata
 	Undefined* undf = new Undefined();
+
+	//Main Algorithm
 	while (!input.isEmpty())
 	{
 		int sl = 0;
 		int automataHigh = -1;
-		for (int i = 0; i < automata.size(); i++)
+		for (int i = 0; i < automata.size(); i++)	//find correct automata
 		{
 			int automataRead = automata[i]->read(input);
 			if ( automataRead > sl)
@@ -75,7 +87,7 @@ int main( int argc, char *argv[])
 				automataHigh = i;
 			}
 		}
-		if (sl == 0)
+		if (sl == 0)	//remove undefined and generate token
 		{
 			input.reset();
 			char testt = input.getChar();
@@ -83,16 +95,19 @@ int main( int argc, char *argv[])
 				std::cout << generateToken(undf, input, 1) << std::endl;;
 			input.removeString(1);
 		}
-		else
+		else	//remove and generate token for longest automata
 		{
 			std::cout << generateToken(automata[automataHigh], input, sl) << std::endl;
 			input.removeString(sl);
 		}
 	}
+
+	//generate EOF token
 	std::cout << "(EOF,\"\"," << (char)(input.lineNumber() + 48) << ")" << std::endl;
+	
+	//mem clean
 	delete undf;
 	for (int i = 0; i < automata.size(); i++) delete automata[i];
-	system("pause");
 	return 0;
 }
 

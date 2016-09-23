@@ -2,7 +2,12 @@
 #include <fstream>
 #include <iostream>
 
-
+/*
+Read
+	reads file into string for later consumption
+	pre: fileName is not empty string
+	post: file is occuied by contents of fileName
+*/
 void FileReader::read(std::string fileName)
 {
 	std::ifstream myfile(fileName);
@@ -64,6 +69,7 @@ int FileReader::lineNumber()
 	return line;
 }
 
+//set file string to test contents
 void FileReader::test(std::string testFile)
 {
 	file = testFile;
